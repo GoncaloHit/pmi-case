@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "workspaces": [
+    "./packages/api",
+    "./packages/app",
+    "./packages/ui"
+  ],
+  "scripts": {
+    "app:dev": "yarn workspace app dev",
+    "auth:dev": "yarn workspace auth start:dev",
+    "api:dev": "yarn workspace api start:dev",
+    "ui:build": "yarn workspace ui build"
+  }
+}
