@@ -10,7 +10,8 @@ export class UsersGuard implements CanActivate {
     const request = context.switchToHttp().getRequest<Request>();
     const token = request.headers.authorization?.replace('Bearer ', '');
 
-    if (!token) throw new UnauthorizedException();
+    //ideally we check for a jwt, just for demo purposes
+    if (!token || token !== 'veryimportanttoken') throw new UnauthorizedException();
 
     return true;
   }
