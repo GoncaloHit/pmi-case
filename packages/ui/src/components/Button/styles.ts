@@ -3,7 +3,7 @@ import { ButtonProps } from './types'
 
 export const $Button = styled.button<ButtonProps>`
   display: flex;
-  width: 100%;
+  width: max-content;
   height: 40px;
   border: none;
   border-radius: 8px;
