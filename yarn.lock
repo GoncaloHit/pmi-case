@@ -2686,6 +2686,11 @@
     "@swc/core-win32-ia32-msvc" "1.3.85"
     "@swc/core-win32-x64-msvc" "1.3.85"
 
+"@swc/plugin-styled-components@1.5.83":
+  version "1.5.83"
+  resolved "https://registry.yarnpkg.com/@swc/plugin-styled-components/-/plugin-styled-components-1.5.83.tgz#ae5ab0cffd6ca716d91aed5238a132eb1e31ad30"
+  integrity sha512-dKIoB4B3ZTtkbn5iNvHYdHKePEiJQ9x7F6bujm0mHd1WjY9CORXU1iMM6trjmcphqaFcpecxYyjc2mq5IrG+4w==
+
 "@swc/types@^0.1.4":
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@swc/types/-/types-0.1.4.tgz#8d647e111dc97a8e2881bf71c2ee2d011698ff10"
