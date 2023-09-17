@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { ROUTES } from './constant/routes'
-import { Home } from 'pages'
+import { Products } from 'pages'
 import { $App, $Content, $Header } from './styles'
 
 export const App = () => {
@@ -9,7 +9,7 @@ export const App = () => {
       <$Header />
       <$Content>
         <Routes>
-          <Route path={ROUTES.home} element={<Home />} />
+          <Route path={ROUTES.home} element={<Products />} />
         </Routes>
       </$Content>
     </$App>

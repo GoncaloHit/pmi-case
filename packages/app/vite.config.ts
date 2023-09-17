@@ -13,6 +13,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: [
+      { find: 'components', replacement: resolve(__dirname, 'src/components') },
       { find: 'constant', replacement: resolve(__dirname, 'src/constant') },
       { find: 'pages', replacement: resolve(__dirname, 'src/pages') },
       { find: 'store', replacement: resolve(__dirname, 'src/store') },
