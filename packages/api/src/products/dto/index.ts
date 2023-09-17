@@ -1,0 +1,1 @@
+export { CreateProductDTO } from './createProduct.dto'
