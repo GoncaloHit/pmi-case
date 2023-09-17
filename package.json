@@ -9,6 +9,7 @@
     "app:dev": "yarn workspace app dev",
     "auth:dev": "yarn workspace auth start:dev",
     "api:dev": "yarn workspace api start:dev",
-    "ui:build": "yarn workspace ui build"
+    "ui:build": "yarn workspace ui build",
+    "ui:storybook": "yarn workspace ui storybook"
   }
 }
