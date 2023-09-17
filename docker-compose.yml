@@ -18,13 +18,13 @@ services:
 
   api:
     container_name: pmi-api
-    command: yarn auth:dev
+    command: yarn api:dev
     restart: unless-stopped
     build:
       context: .
       dockerfile: dev.dockerfile
     volumes:
-      - ./packages/auth:/base/packages/auth
+      - ./packages/api:/base/packages/api
       - ./node_modules:/base/node_modules
     networks:
       - pmi
