@@ -71,23 +71,6 @@ Auth Service should be always isolated and replicated if necessary for scalabili
 <img src="docs/infra.webp" height="300">
 
 ## How To Use
-```bash
-# Clone this repository
-$ git clone git@github.com:GoncaloHit/pmi-case.git
-
-# Install dependencies
-$ yarn
-
-# Run the infrastructure (auth, api, proxy, app)
-$ docker-compose up
-
-# Run Storybook and develop shared ui components
-$ yarn ui:storybook
-
-# Build shared components so we can use on other projects
-$ yarn ui:build
-```
-
 > **Note**
 > we use https so please add the following urls to your hosts files:
 ```bash
@@ -98,4 +81,32 @@ $ sudo nano /etc/hosts
 127.0.0.1 app.pmi.local
 127.0.0.1 api.pmi.local
 127.0.0.1 auth.pmi.local
+```
+
+```bash
+# Clone this repository
+$ git clone git@github.com:GoncaloHit/pmi-case.git
+
+# Install dependencies
+$ yarn
+
+# Build shared components so we can use on other projects
+$ yarn ui:build
+
+# After Building the UI package, we have to update it in other packages that use it
+$ yarn --check-files
+
+# If the above command fails some how (app doesnt run)
+$ rm yarn.lock
+$ yarn
+
+# Run the infrastructure (auth, api, proxy, app)
+$ docker-compose up
+
+# App available at (if you added to the hosts file)
+https://app.pmi.local
+
+## Other Commands
+# Run Storybook and develop shared ui components
+$ yarn ui:storybook
 ```
