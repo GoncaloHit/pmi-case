@@ -37,6 +37,10 @@
         "namedComponents": "arrow-function"
       }
     ],
+    "quotes": [
+      "error",
+      "single"
+    ],
     "semi": [
       "error",
       "never"

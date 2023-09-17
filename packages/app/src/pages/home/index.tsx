@@ -1,10 +1,16 @@
-import { Button } from "ui"
+import { Button } from 'ui'
+import { $Title } from './styles'
+import { usePingMutation } from 'store/api'
 
 export const Home = () => {
+  const [ping] = usePingMutation()
+
+  const handlePing = () => ping()
+
   return (
     <>
-      Hello from home
-      <Button>Login</Button>
+      <$Title>App One</$Title>
+      <Button onClick={handlePing}>Ping API One</Button>
     </>
   )
 }
