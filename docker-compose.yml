@@ -1,0 +1,65 @@
+version: "3.1"
+
+services:
+  app:
+    container_name: pmi-app
+    command: yarn app:dev
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    volumes:
+      - ./packages/app:/base/packages/app
+      - ./node_modules:/base/node_modules
+    networks:
+      - pmi
+    ports:
+      - 5173:5173
+
+  api:
+    container_name: pmi-api
+    command: yarn auth:dev
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    volumes:
+      - ./packages/auth:/base/packages/auth
+      - ./node_modules:/base/node_modules
+    networks:
+      - pmi
+    ports:
+      - 3001:3001
+
+  auth:
+    container_name: pmi-auth
+    command: yarn auth:dev
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    volumes:
+      - ./packages/auth:/base/packages/auth
+      - ./node_modules:/base/node_modules
+    networks:
+      - pmi
+    ports:
+      - 3000:3000
+
+  proxy:
+    container_name: pmi-proxy
+    restart: unless-stopped
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    depends_on:
+      - auth
+      - api
+      - app
+    networks:
+      - pmi
+    ports:
+      - 8080:8080
+      - 443:443
+networks:
+  pmi:
