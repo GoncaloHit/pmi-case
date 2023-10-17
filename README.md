@@ -1,10 +1,4 @@
 
-<h1 align="center">
-  <img src="docs/pmi.webp" height="180">
- <br>
-    PMI Test case
-</h1>
-
 <p align="center">
   <a href="https://react.dev/">
     <img src="https://img.shields.io/badge/React%20-gray?style=for-the-badge&logo=react">
